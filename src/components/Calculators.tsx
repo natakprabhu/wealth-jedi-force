@@ -25,6 +25,10 @@ const calculators = [
 ];
 
 const Calculators = () => {
+  const handleCalculatorClick = (calcName: string) => {
+    window.location.href = '/calculators';
+  };
+
   return (
     <section id="calculators" className="py-24">
       <div className="container mx-auto px-4">
@@ -44,6 +48,7 @@ const Calculators = () => {
               <Card
                 key={index}
                 className="group hover:glow-neon transition-all duration-300 hover:-translate-y-2 bg-card border-border cursor-pointer"
+                onClick={() => handleCalculatorClick(calc.name)}
               >
                 <CardHeader className="text-center pb-4">
                   <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 group-hover:bg-secondary/20 transition-colors mx-auto">

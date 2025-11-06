@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Calculators from "./pages/Calculators";
+import SIPCalculator from "./pages/calculators/SIPCalculator";
+import NPSCalculator from "./pages/calculators/NPSCalculator";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/calculators" element={<Calculators />} />
+          <Route path="/calculators/sip" element={<SIPCalculator />} />
+          <Route path="/calculators/nps" element={<NPSCalculator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
