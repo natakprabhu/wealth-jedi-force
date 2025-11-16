@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Calculators from "./pages/Calculators";
 import SIPCalculator from "./pages/calculators/SIPCalculator";
 import NPSCalculator from "./pages/calculators/NPSCalculator";
+import ResearchArticle from "./pages/ResearchArticle";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/calculators" element={<Calculators />} />
           <Route path="/calculators/sip" element={<SIPCalculator />} />
           <Route path="/calculators/nps" element={<NPSCalculator />} />
+          <Route path="/article" element={<ResearchArticle />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
