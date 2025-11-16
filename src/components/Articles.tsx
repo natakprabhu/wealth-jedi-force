@@ -1,6 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lock, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const articles = [
   {
@@ -64,9 +65,11 @@ const Articles = () => {
                 <p className="text-muted-foreground">{article.preview}</p>
               </CardContent>
               <CardFooter>
-                <Button variant="ghost" className="w-full group/btn">
-                  Read More
-                  <ArrowRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                <Button variant="ghost" className="w-full group/btn" asChild>
+                  <Link to="/article">
+                    Read More
+                    <ArrowRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
